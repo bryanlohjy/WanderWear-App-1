@@ -21,7 +21,7 @@
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
     <script src="js/jquery-1.12.3.js"></script>
     <script src="js/location.js"></script>
-
+    <script src="js/weather.js"></script>
     <script src="js/my.js"></script>
 
   	<title>WanderWear</title>
@@ -40,9 +40,15 @@
                   <div id='map'>
                     <p class="status">Waiting for your location...</p>
                   </div>
+                </div>
+                <div class="swiper-slide" id= "window-height-content slide-outcome">
+                  <div id = "lat"></div>
+                  <div id = "long"></div>
+                  <div id = "location">Location</div>
+                  <hr></hr>
+                  <div id = "temperature">temperature</div> 
 
                 </div>
-                <div class="swiper-slide" id= "window-height-content">Outcome - are you wearing enough etc.</div>
                 <div class="swiper-slide" id= "window-height-content">Clothing choices</div>
             </div>
         </div>
