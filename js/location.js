@@ -8,6 +8,8 @@ var marker;
 geolocation = navigator.geolocation;
 geolocation.watchPosition(updateLocation, showBadStatus);
 
+
+
 // When we get the new location back
 function updateLocation(position) {
   // Get the updated coords
@@ -19,6 +21,17 @@ function updateLocation(position) {
   if (map === undefined) {
     // Make the map and marker if they aren't defined, and add the marker to the map
     map = L.mapbox.map('map', 'mapbox.streets').setView([mylat, mylong], 20);
+
+    //Disable drag and zoom handlers.
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.keyboard.disable();
+
+    // Disable tap handler, if present.
+    if (map.tap) map.tap.disable();
+
     marker = L.marker([mylat, mylong], {
       icon: L.mapbox.marker.icon({
       'marker-color': '#f86767'

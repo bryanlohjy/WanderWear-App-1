@@ -2,21 +2,56 @@
 
 <html>
   <head>
-  	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' charset="utf-8" />
+  	<meta name='viewport' content='initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui' charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-  	<link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="framework7.material.min.css">
+
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="framework7.material.colors.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
   	<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
 
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
     <script src="js/jquery-1.12.3.js"></script>
     <script src="js/location.js"></script>
 
-  	<title>Geolocation</title>
+    <script src="js/my.js"></script>
+
+  	<title>WanderWear</title>
   </head>
 
   <body>
-  	<div id='map'>
-      <p class="status">Waiting for your location...</p>
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Slider container -->
+        <div class="swiper-container">
+            <!-- Slides wrapper -->
+            <div class="swiper-wrapper" id= "window-height-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" id= "window-height-content">
+                  <div id='map'>
+                    <p class="status">Waiting for your location...</p>
+                  </div>
+
+                </div>
+                <div class="swiper-slide" id= "window-height-content">Outcome - are you wearing enough etc.</div>
+                <div class="swiper-slide" id= "window-height-content">Clothing choices</div>
+            </div>
+        </div>
+      </div>
     </div>
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
   </body>
 </html>
