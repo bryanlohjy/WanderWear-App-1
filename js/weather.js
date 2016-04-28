@@ -2,7 +2,7 @@ geolocation = navigator.geolocation;
 geolocation.getCurrentPosition(currentPosition);
 
 
-//Reverse Geocoding : Getting Location Info from current coordinates
+//Reverse Geocoding via OpenCage API: Getting Location Info from current coordinates
 function currentPosition(position){
 	var lat  = position.coords.latitude;
 	var long = position.coords.longitude;
