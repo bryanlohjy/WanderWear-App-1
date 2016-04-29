@@ -54,10 +54,10 @@ function currentPosition(position){
 						    		type:'GET',
 								    url: clothing_url,
 								    dataType: 'json',
+								    async: false,
 						    		success: function(clothing){
-						    			console.log(clothing);
 
-						    			//Index number of slides
+						    			//Reading CLO values based on Index number of slides (UI to be clothing on slideshow)
 						    			var top_CLO = clothing.top[my_top_readout].CLO;
 						    			var bottom_CLO = clothing.bottom[my_bottom_readout].CLO;
 
