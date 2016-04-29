@@ -18,13 +18,31 @@ var mySwiper = myApp.swiper('.swiper-container', {
 
 var mySwiper2 = myApp.swiper('.swiper-2', {
 	pagination:'.swiper-2 .swiper-pagination',
-	spaceBetween: 50
+	spaceBetween: 50,
+	onInit: function (top) {
+                var my_top = top.activeIndex;
+                console.log(my_top);
+            },
+	onSlideChangeStart: function (top) {
+                var my_top = top.activeIndex;
+				console.log(my_top);
+            }
 });
+
+
 
 
 var mySwiper3 = myApp.swiper('.swiper-3', {
 	pagination:'.swiper-3 .swiper-pagination',
-	spaceBetween: 50
+	spaceBetween: 50,
+	onInit: function (bottom) {
+    			var my_bottom = bottom.activeIndex;
+                console.log(my_bottom);
+            },
+	onSlideChangeStart: function (bottom) {
+                var my_bottom = bottom.activeIndex;
+                console.log(my_bottom);
+            }
 });
 
 // Callbacks to run specific code for specific pages, for example for About page:

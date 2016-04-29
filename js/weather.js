@@ -57,8 +57,9 @@ function currentPosition(position){
 						    		success: function(clothing){
 						    			console.log(clothing);
 
-						    			// var top_clothing = $()
-						    			// var bottom_clothing =
+	
+
+						    			console.log(my_top);
 
 						    			var top = clothing.top[0].CLO;
 						    			var bottom = clothing.bottom[0].CLO;

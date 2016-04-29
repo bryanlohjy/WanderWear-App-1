@@ -1,17 +1,17 @@
 {
  "top": [
     { 
-        "type":"Shirt",
+        "type":"Shirts",
         "description": "Long-sleeve, shirt collar (broadcloth)",
         "CLO":0.33
     }, 
     { 
-        "type":"Shirt",
-        "description": "Short-sleeve, shirt collar (broadcloth)",
-        "CLO":0.25
+        "type":"Suit Jackets and Vests (lined)",
+        "description": "Double-breasted suit jacket (tweed)",
+        "CLO":0.56
     }, 
     { 
-        "type":"Shirt",
+        "type":"Shirts",
         "description": "Sleeveless, scoop neck (broadcloth)",
         "CLO":0.18
     } 
@@ -19,8 +19,8 @@
  "bottom": [
     { 
         "type":"Trousers and Coveralls",
-        "description": "Straight, long, fitted (denim)",
-        "CLO":0.21
+        "description": "Insulated coveralls (multicomponent)",
+        "CLO":1.09
     }, 
     { 
         "type":"Trousers and Coveralls",
