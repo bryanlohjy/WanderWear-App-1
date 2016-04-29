@@ -56,6 +56,19 @@ function currentPosition(position){
 								    dataType: 'json',
 						    		success: function(clothing){
 						    			console.log(clothing);
+
+						    			// var top_clothing = $()
+						    			// var bottom_clothing =
+
+						    			var top = clothing.top[0].CLO;
+						    			var bottom = clothing.bottom[0].CLO;
+
+						    			console.log("Top: ",top);
+						    			console.log("Bottom: ",bottom);
+
+
+
+
 						    		}
 						    	});
 	    		}

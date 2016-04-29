@@ -13,10 +13,19 @@ var mainView = myApp.addView('.view-main', {
   
 // Init slider and store its instance in mySwiper variable
 var mySwiper = myApp.swiper('.swiper-container', {
-    pagination:'.swiper-pagination',
     direction: 'vertical'
 });
 
+var mySwiper2 = myApp.swiper('.swiper-2', {
+	pagination:'.swiper-2 .swiper-pagination',
+	spaceBetween: 50
+});
+
+
+var mySwiper3 = myApp.swiper('.swiper-3', {
+	pagination:'.swiper-3 .swiper-pagination',
+	spaceBetween: 50
+});
 
 // Callbacks to run specific code for specific pages, for example for About page:
 myApp.onPageInit('about', function (page) {
