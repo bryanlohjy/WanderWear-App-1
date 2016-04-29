@@ -57,18 +57,12 @@ function currentPosition(position){
 						    		success: function(clothing){
 						    			console.log(clothing);
 
-	
+						    			//Index number of slides
+						    			var top_CLO = clothing.top[my_top_readout].CLO;
+						    			var bottom_CLO = clothing.bottom[my_bottom_readout].CLO;
 
-						    			console.log(my_top);
-
-						    			var top = clothing.top[0].CLO;
-						    			var bottom = clothing.bottom[0].CLO;
-
-						    			console.log("Top: ",top);
-						    			console.log("Bottom: ",bottom);
-
-
-
+						    			console.log("Top CLO: ",top_CLO);
+						    			console.log("Bottom CLO: ",bottom_CLO);
 
 						    		}
 						    	});

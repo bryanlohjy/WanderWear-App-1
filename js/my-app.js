@@ -1,10 +1,5 @@
 var my_top_readout = 0;
-
-function storeAndPrintValue(value)
-{
-	this.my_top_readout = value;
-	console.log(my_top_readout);
-}
+var my_bottom_readout = 0;
 
 // Initialize your app
 var myApp = new Framework7();
@@ -31,28 +26,25 @@ var mySwiper2 = myApp.swiper(
 		onInit: function (top){
                 var my_top = top.activeIndex;
 	      		my_top_readout = my_top;
-	        	storeAndPrintValue(my_top);
+
             },
 		onSlideChangeStart: function (top) {
                 var my_top = top.activeIndex;
 	      		my_top_readout = my_top;
-	        	storeAndPrintValue(my_top);
+	        
 			}
 });
-
-console.log(my_top_readout);
-
 
 var mySwiper3 = myApp.swiper('.swiper-3', {
 	pagination:'.swiper-3 .swiper-pagination',
 	spaceBetween: 50,
 	onInit: function (bottom) {
     			var my_bottom = bottom.activeIndex;
-                console.log(my_bottom);
+    			my_bottom_readout = my_bottom;
             },
 	onSlideChangeStart: function (bottom) {
                 var my_bottom = bottom.activeIndex;
-                console.log(my_bottom);
+                my_bottom_readout = my_bottom;
             }
 });
 
