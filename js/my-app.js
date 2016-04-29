@@ -1,3 +1,11 @@
+var my_top_readout = 0;
+
+function storeAndPrintValue(value)
+{
+	this.my_top_readout = value;
+	console.log(my_top_readout);
+}
+
 // Initialize your app
 var myApp = new Framework7();
 
@@ -10,26 +18,29 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-  
 // Init slider and store its instance in mySwiper variable
 var mySwiper = myApp.swiper('.swiper-container', {
     direction: 'vertical'
 });
 
-var mySwiper2 = myApp.swiper('.swiper-2', {
-	pagination:'.swiper-2 .swiper-pagination',
-	spaceBetween: 50,
-	onInit: function (top) {
+var mySwiper2 = myApp.swiper(
+	'.swiper-2',
+	{
+		pagination:'.swiper-2 .swiper-pagination',
+		spaceBetween: 50,
+		onInit: function (top){
                 var my_top = top.activeIndex;
-                console.log(my_top);
+	      		my_top_readout = my_top;
+	        	storeAndPrintValue(my_top);
             },
-	onSlideChangeStart: function (top) {
+		onSlideChangeStart: function (top) {
                 var my_top = top.activeIndex;
-				console.log(my_top);
-            }
+	      		my_top_readout = my_top;
+	        	storeAndPrintValue(my_top);
+			}
 });
 
-
+console.log(my_top_readout);
 
 
 var mySwiper3 = myApp.swiper('.swiper-3', {
