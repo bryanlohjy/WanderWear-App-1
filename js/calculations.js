@@ -1,3 +1,65 @@
+var rootRef = new Firebase('https://wanderwear.firebaseio.com/');
+
+//writing data
+
+var usersRef = rootRef.child("users");
+
+$( "#feedback-hot" ).click(function() {
+	usersRef.child("user-1").child("feedback").push(-1)
+	
+});
+
+$( "#feedback-good" ).click(function() {
+	usersRef.child("user-1").child("feedback").push(0)
+	
+});
+
+$( "#feedback-cold" ).click(function() {
+	usersRef.child("user-1").child("feedback").push(1)
+	
+});
+
+$( "#clear-bias" ).click(function() {
+	usersRef.child("user-1").child("feedback").set(0)
+	
+});
+
+usersRef.child("user-1").child("feedback").on('value', function(child_snapshot) {
+	
+	var bias_list = child_snapshot.val();
+
+	var bias_array = $.map(bias_list, function(value, index) {
+	    return [value];
+	});
+
+
+	console.log(bias_array);
+	//regex to get value
+	//find total number of objects
+});
+
+
+
+
+// var ref = new Firebase("https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts");
+// // Retrieve new posts as they are added to our database
+// ref.on("child_added", function(snapshot, prevChildKey) {
+//   var newPost = snapshot.val();
+//   console.log("Author: " + newPost.author);
+//   console.log("Title: " + newPost.title);
+//   console.log("Previous Post ID: " + prevChildKey);
+// });
+
+
+
+// $( "#feedback-good" ).click(function() {
+//   alert( "Handler for .click() called." );
+// });
+
+// $( "#feedback-cold" ).click(function() {
+//   alert( "Handler for .click() called." );
+// });
+
 
 
 setInterval (function sumCLO(){

@@ -41,40 +41,40 @@
 
                 <!-- OUTCOME -->
                 <div class="swiper-slide slide-outcome" id= "window-height-outcome">
-                  <h4>GPS Sensor</h4>
+                  <div>GPS Sensor:</div>
                   <div id = "lat">Initial Latitude: </div>
                   <div id = "long">Initial Longitude: </div>
                   <div id = "mylat">Current Latitude: </div>
                   <div id = "mylong">Current Longitude: </div>
                   <hr></hr>
-                  <h4>Reverse Geocoding via OpenCage API</h4>
+                  <div>Reverse Geocoding via OpenCage API:</div>
                   <div id = "state">State: </div>
                   <div id = "country-code">Country Code: </div>
                   <hr></hr>
-                  <h4>Hourly Temperature via Weather Underground API</h4>
+                  <div>Hourly Temperature via Weather Underground API:</div>
                   <div id = "air-temperature">Air Temperature: </div> 
                   <div id = "dewpoint">Dewpoint: </div> 
                   <div id = "humidity">Humidity: </div> 
                   <div id = "wind-speed">Wind Speed: </div> 
                   <div id = "condition">Condition: </div> 
                   <hr></hr>
-                  <h4>Clothing Insulation</h4>
+                  <div>Clothing Insulation:</div>
                   <div id = "top-CLO"></div> 
                   <div id = "bottom-CLO">Bottom CLO: </div> 
                   <div id = "sum-CLO">Sum CLO: </div> 
                   <hr></hr>
-                  <h4>Comfort</h4>
+                  <div>Comfort:</div>
                   <div id = "predicted-comfort">Predicted Comfort: </div> 
                   <div id = "user-bias">User Bias: </div> 
                   <div id = "evaluated-comfort">Evaluated Comfort: </div> 
 
                   <div class="button button-fill" id="comfort-status"></div>
                   <p class="buttons-row">
-                    <a href="#" class="button button-raised button-fill color-red">Too Hot</a>
-                    <a href="#" class="button button-raised button-fill color-green">Good</a>
-                    <a href="#" class="button button-raised button-fill color-blue">Too Cold</a>
+                    <a href="#" class="button button-raised button-fill color-red" id="feedback-hot">Too Hot</a>
+                    <a href="#" class="button button-raised button-fill color-green" id="feedback-good">Good</a>
+                    <a href="#" class="button button-raised button-fill color-blue" id="feedback-cold">Too Cold</a>
                   </p>
-
+                  <div class="button button-fill color-yellow" id="clear-bias">Clear Bias</div>
                 </div>
 
                 <!-- CLOTHING -->
@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-
+    <script src="js/lodash.core.js"></script>
     <script src="js/jquery-1.12.3.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
     <!-- Path to Framework7 Library JS-->

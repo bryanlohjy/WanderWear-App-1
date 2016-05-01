@@ -40,6 +40,7 @@ function currentPosition(position){
 			    url: wunderground_url,
 			    dataType: 'json',
 	    		success: function(weather){
+
 	    			var temperature = weather.hourly_forecast[0].temp.metric;
 	    			var dewpoint = weather.hourly_forecast[0].dewpoint.metric;
 	    			var humidity = weather.hourly_forecast[0].humidity;
