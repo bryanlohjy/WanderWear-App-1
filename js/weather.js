@@ -93,9 +93,9 @@ function currentPosition(position){
 
 											$(function(){
 											    if(CLO > temperature/12) {                            
-											        $('.slide-outcome').css({'background-color':'#00cc00'});
+											        // $('.slide-outcome').css({'background-color':'#00cc00'});
 											    }else{
-											    	$('.slide-outcome').css({'background-color':'red'});
+											    	// $('.slide-outcome').css({'background-color':'red'});
 											    }       
 											                                                   
 											    // $(window).resize(function(){
