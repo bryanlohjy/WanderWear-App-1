@@ -28,6 +28,9 @@ function currentPosition(position){
 
 	    	console.log("State: ",state);
 	    	console.log("Country Code: ",country_code);
+	    	
+	    	$('#state').append(state);
+			$('#country-code').append(country_code);
 
 	    	//Getting weather info from location
 	    	var wunderground_url = "http://api.wunderground.com/api/86abf2a752b687fa/hourly/q/"+country_code+"/"+state+".json";
@@ -68,6 +71,12 @@ function currentPosition(position){
 						    			console.log("Top CLO: ",top_CLO);
 						    			console.log("Bottom CLO: ",bottom_CLO);
 						    			console.log("Sum CLO: ",sum_CLO);
+
+						    			$('#air-temperature').append(temperature);
+										$('#dewpoint').append(dewpoint);
+										$('#humidity').append(humidity);
+										$('#wind-speed').append(wind_speed);
+										$('#condition').append(condition);
 
 						    				// CALCULATIONS
 

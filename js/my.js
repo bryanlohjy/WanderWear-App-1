@@ -5,6 +5,7 @@ $(window).load(function(){
     if(windowH != wrapperH) {                            
         $('#window-height-wrapper').css('height',windowH+'px');
         $('#map').css('height',windowH+'px');
+        //$('#window-height-map').css('height',windowH+'px');
         // $('#window-height-outcome').css('height',windowH+'px');
         // $('#window-height-clothing').css('height',windowH+'px');
         

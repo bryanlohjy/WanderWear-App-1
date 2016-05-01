@@ -27,12 +27,39 @@ var mySwiper2 = myApp.swiper(
                 var my_top = top.activeIndex;
 	      		my_top_readout = my_top;
 
+                    $.ajax({
+                    type:'GET',
+                        url: 'js/clothing.json',
+                        dataType: 'json',
+                        async: false,
+                        success: function(clothing){
+
+                        var my_top_CLO = clothing.top[my_top].CLO;
+
+                        $('#top-CLO').html("Top CLO: " + my_top_CLO);
+                    }
+                });
+
             },
+
 		onSlideChangeStart: function (top) {
                 var my_top = top.activeIndex;
 	      		my_top_readout = my_top;
-	        
-			}
+                   
+                    $.ajax({
+                    type:'GET',
+                        url: 'js/clothing.json',
+                        dataType: 'json',
+                        async: false,
+                        success: function(clothing){
+
+                        var my_top_CLO = clothing.top[my_top].CLO;
+
+                        $('#top-CLO').html("Top CLO: " + my_top_CLO);
+                    }
+                });
+
+            }
 });
 
 var mySwiper3 = myApp.swiper('.swiper-3', {
@@ -41,10 +68,42 @@ var mySwiper3 = myApp.swiper('.swiper-3', {
 	onInit: function (bottom) {
     			var my_bottom = bottom.activeIndex;
     			my_bottom_readout = my_bottom;
+                   
+                    $.ajax({
+                    type:'GET',
+                        url: 'js/clothing.json',
+                        dataType: 'json',
+                        async: false,
+                        success: function(clothing){
+
+                        var my_bottom_CLO = clothing.bottom[my_bottom].CLO;
+
+                        $('#bottom-CLO').html("Bottom CLO: " + my_bottom_CLO);
+                    }
+                });
+
+
+
+
             },
 	onSlideChangeStart: function (bottom) {
                 var my_bottom = bottom.activeIndex;
                 my_bottom_readout = my_bottom;
+                 
+                    $.ajax({
+                    type:'GET',
+                        url: 'js/clothing.json',
+                        dataType: 'json',
+                        async: false,
+                        success: function(clothing){
+
+                        var my_bottom_CLO = clothing.bottom[my_bottom].CLO;
+
+                        $('#bottom-CLO').html("Bottom CLO: " + my_bottom_CLO);
+                    }
+                });
+
+
             }
 });
 

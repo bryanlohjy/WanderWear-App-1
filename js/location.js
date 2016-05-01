@@ -18,6 +18,9 @@ function updateLocation(position) {
 
   $('.status').html("");
 
+  $('#mylat').append(mylat);
+  $('#mylong').append(mylong);
+
   if (map === undefined) {
     // Make the map and marker if they aren't defined, and add the marker to the map
     map = L.mapbox.map('map', 'mapbox.streets').setView([mylat, mylong], 20);
