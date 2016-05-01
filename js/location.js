@@ -18,8 +18,9 @@ function updateLocation(position) {
 
   $('.status').html("");
 
-  $('#mylat').append(mylat);
-  $('#mylong').append(mylong);
+  $('#mylat').html("Current Latitude: " + mylat);
+  $('#mylong').html("Current Longitude: " + mylong);
+
 
   if (map === undefined) {
     // Make the map and marker if they aren't defined, and add the marker to the map
