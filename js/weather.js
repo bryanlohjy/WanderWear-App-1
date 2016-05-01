@@ -46,7 +46,7 @@ function currentPosition(position){
 
 
 	    						//Getting CLO value from local JSON File. Based on the works of E.A. McCullough, Ph.D. E.W. Jones, Ph.D. and P.E. J. Huck (http://www.cbe.berkeley.edu/research/other-papers/McCullough%20et%20al%201985%20A%20comprehensive%20data%20base%20for%20estimating%20clothing%20insulation.pdf)
-	    						var clothing_url = '/js/clothing.json';
+	    						var clothing_url = 'js/clothing.json';
 
 	    				    	$.ajax({
 						    		type:'GET',
