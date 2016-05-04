@@ -19,7 +19,12 @@ body {
 	text-align: center;
 	padding-top: 10px;
 }
-
+.fixing{
+	margin-top:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+	margin-right: auto;
+}
 #map {
 	position:absolute;
 	top:0;
